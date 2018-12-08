@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link href="Final.css" rel="stylesheet" />
+    <meta name=“viewport” content=“width=device-width,initial-scale=1.0”>
+    <link rel="stylesheet" href="js/web-fonts-with-css/css/fontawesome-all.min.css">
+    <title>Final - Sweet Treats</title>
+</head>
+
+<body>
+    <div class="head">
+        <img src="image/head-01.png">
+    </div>
+    <button class="backtop" id="backtop">
+        <i class="fas fa-angle-up"></i>
+    </button>
+    <div class="container">
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/1.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/2.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/3.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/4.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/5.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/6.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/7.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/8.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/9.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/10.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/11.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/12.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/13.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/14.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/15.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/16.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/17.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/18.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/19.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/20.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/21.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/22.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+        <a class="link" href="#">
+            <div class="item">
+                <img src="image/23.jpg" alt="Hình minh họa">
+                <div class="text"></div>
+            </div>
+        </a>
+    </div>
+
+
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script> $(document).ready(function () {
+            show();
+            Count();
+            $(".backtop").click(function () {
+                $("html, body").animate({ scrollTop: 0 });
+            })
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop()) {
+                    $('#backtop').fadeIn();
+                } else {
+                    $('#backtop').fadeOut();
+                }
+            });
+        })
+        function Count() {
+            var x = document.getElementsByClassName("text");
+            for (var i = 0; i < $(".container").children().length; i++) {
+                var y = 1;
+                x[i].innerHTML = i + y;
+            }
+        }
+        $(window).resize(function () {
+            show();
+        })
+        function show() {
+            var width = $(window).width();
+            if (width >= 992) {
+                $(".item").css('width', '20%');
+                OnDesktop();
+            }
+            if (width < 992) {
+                $(".item").css('width','25%')
+                OnTable();
+            }
+            if (width < 480) {
+                $(".item").css('width', '50%');
+                Onphone();
+            }
+        }
+        function OnDesktop() {
+            var c1 = 0.0;
+            var c2 = 0.0;
+            var c3 = 0.0;
+            var c4 = 0.0;
+            var c5 = 0.0;
+
+            c1 = c1 + $(".item").eq(0).innerHeight();
+            $(".item").eq(0).css('left', '0%');
+            c2 = c2 + $(".item").eq(1).innerHeight();
+            $(".item").eq(1).css('left', '20%');
+            c3 = c3 + $(".item").eq(2).innerHeight();
+            $(".item").eq(2).css('left', '40%');
+            c4 = c4 + $(".item").eq(3).innerHeight();
+            $(".item").eq(3).css('left', '60%');
+            $(".item").eq(3).css('top', '0%');
+            c5 = c5 + $(".item").eq(4).innerHeight();
+            $(".item").eq(4).css('left', '80%');
+            $(".item").eq(4).css('top', '0%');
+
+            for (var i = 5; i < $(".container").children().length; i++) {
+                if (Math.min(c1, c2, c3, c4, c5) == c1) {
+                    $(".item").eq(i).css('left', '0%');
+                    $(".item").eq(i).css('top', c1);
+                    c1 = c1 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3, c4, c5) == c2) {
+                    $(".item").eq(i).css('left', '20%');
+                    $(".item").eq(i).css('top', c2);
+                    c2 = c2 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3, c4, c5) == c3) {
+                    $(".item").eq(i).css('left', '40%');
+                    $(".item").eq(i).css('top', c3);
+                    c3 = c3 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3, c4, c5) == c4) {
+                    $(".item").eq(i).css('left', '60%');
+                    $(".item").eq(i).css('top', c4);
+                    c4 = c4 + $(".item").eq(i).innerHeight();
+                }
+                else {
+                    $(".item").eq(i).css('left', '80%');
+                    $(".item").eq(i).css('top', c5);
+                    c5 = c5 + $(".item").eq(i).innerHeight();
+                }
+            }
+        }
+
+
+        function OnTable() {
+            var c1 = 0.0;
+            var c2 = 0.0;
+            var c3 = 0.0;
+            var c4 = 0.0;
+
+            c1 = c1 + $(".item").eq(0).innerHeight();
+            $(".item").eq(0).css('left', '0%');
+            c2 = c2 + $(".item").eq(1).innerHeight();
+            $(".item").eq(1).css('left', '25%');
+            $(".item").eq(1).css('top', '0%');
+            c3 = c3 + $(".item").eq(2).innerHeight();
+            $(".item").eq(2).css('left', '50%');
+            $(".item").eq(2).css('top', '0%');
+            c4 = c4 + $(".item").eq(3).innerHeight();
+            $(".item").eq(3).css('left', '75%');
+            $(".item").eq(3).css('top', '0%');
+
+            for (var i = 4; i < $(".container").children().length; i++) {
+                if (Math.min(c1, c2, c3,c4) == c1) {
+                    $(".item").eq(i).css('left', '0%');
+                    $(".item").eq(i).css('top', c1);
+                    c1 = c1 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3,c4) == c2) {
+                    $(".item").eq(i).css('left','25%');
+                    $(".item").eq(i).css('top', c2); 
+                    c2 = c2 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3,c4) == c3) {
+                    $(".item").eq(i).css('left','50%');
+                    $(".item").eq(i).css('top', c3);
+                    c3 = c3 + $(".item").eq(i).innerHeight();
+                }
+                else if (Math.min(c1, c2, c3, c4) == c4) {
+                    $(".item").eq(i).css('left', '75%');
+                    $(".item").eq(i).css('top', c4);
+                    c4 = c4 + $(".item").eq(i).innerHeight();
+                }
+            }
+        }
+        function Onphone() {
+            var c1 = 0.0;
+            var c2 = 0.0;
+            c1 = c1 + $(".item").eq(0).innerHeight();
+            $(".item").eq(0).css('left', '0%');
+            c2 = c2 + $(".item").eq(1).innerHeight();
+            $(".item").eq(1).css('left', '50%');
+
+            for (var i = 2; i < $(".container").children().length; i++) {
+                if (Math.min(c1, c2) == c1) {
+                    $(".item").eq(i).css('left', '0%');
+                    $(".item").eq(i).css('top', c1);
+                    c1 = c1 + $(".item").eq(i).innerHeight();
+                }
+                else {
+                    $(".item").eq(i).css('left', '50%');
+                    $(".item").eq(i).css('top', c2);
+                    c2 = c2 + $(".item").eq(i).innerHeight();
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
